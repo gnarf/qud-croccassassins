@@ -4,6 +4,7 @@
     </object>
 
     <object Name="Gnarf_Croccassassin" Inherits="Croc">
+        <part Name="ConversationScript" ConversationID="Gnarf_Croccassassin" />
         <stat Name="Level" Value="6" />
         <skill Name="Axe" />
         <skill Name="Axe_Expertise" />

@@ -1,0 +1,15 @@
+<conversations>
+    <conversation ID="Gnarf_Croccassassin" Inherits="Reptiles">
+        <start ID="Start" Priority="2">
+            <text>
+{{emote|*sighs*}}
+I've been waiting many moons for a snapjaw to find me, why did you disturb my hiding place?!
+            </text>
+            <choice ID="JoinPartyChoice" IfReputationAtLeast="Loved">
+                <text>I would ask you to join me.</text>
+                <part Name="WaterRitualJoinParty" />
+            </choice>
+            <choice Target="End">...</choice>
+        </start>
+    </conversation>
+</conversations>
