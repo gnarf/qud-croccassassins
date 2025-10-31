@@ -1,13 +1,13 @@
 # Croccassassins (A Caves of Qud reanimated Monster Mash Mod)
 
-## Features:
+## Features (somewhat spoilery)
 
 * Each croccasin has a 10% chance to reveal itself as a croccassassin when you pick it up.
 * Oops! All crocassassins - Options menu option to make it 100% chance
-* Can recruit crocassassins to your party if you are high enough reputation with unshelled reptiles.
 * If you are friendly enough with crocs, you can discover a quest!
-* Adds shoe racks
+* Can recruit crocassassins to your party if you are high enough reputation with unshelled reptiles.
+* Adds shoe racks in random places, highly likely to contain croccasins
 
-## Ideas/TODO:
+## Ideas/TODO
 
 * [ ] really let the "sass" speak up
