@@ -1,0 +1,13 @@
+<objects>
+    <object Name="Croccasins" Load="Merge">
+        <part Name="Gnarf_Croccassassin_Spawner" />
+    </object>
+
+    <object Name="Gnarf_Croccassassin" Inherits="Croc">
+        <stat Name="Level" Value="6" />
+        <skill Name="Axe" />
+        <skill Name="Axe_Expertise" />
+        <skill Name="Axe_Dismember" />
+        <part Name="Render" DisplayName="{{crochide|croccas{{K|sass}}in}}" />
+    </object>
+</objects>
