@@ -6,7 +6,6 @@ namespace XRL.World.Parts
     {
         public int SpawnChance = 10;
         public string Spawn = "Gnarf_Croccassassin";
-        public bool WillJoinParty = true;
         public override bool WantEvent(int ID, int Cascade)
         {
             return base.WantEvent(ID, Cascade)
@@ -45,8 +44,8 @@ namespace XRL.World.Parts
 
                         if (replaceWith != null)
                         {
-                            var verb = replaceWith.GetxTag("TakeReplace", "Verb", "uncoil");
-                            var extra = replaceWith.GetxTag("TakeReplace", "Extra", $"from {replaceWith.its} dormant form ready to attack");
+                            var verb = "uncoil";
+                            var extra = $"from {replaceWith.its} dormant form ready to attack";
                             XDidY(replaceWith, verb, extra, ColorAsGoodFor: replaceWith, EndMark: "!", UsePopup: true);
                             E.RequestInterfaceExit();
                             toReplace.Destroy(Silent: true);
