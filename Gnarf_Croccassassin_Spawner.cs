@@ -27,7 +27,7 @@ namespace XRL.World.Parts
         {
             if (E.Actor.IsInActiveZone() && !IgnoreContexts.Contains(E.Context))
             {
-                MetricsManager.LogInfo($"Checking croc spawn chance - {E.Context}");
+                // MetricsManager.LogInfo($"Checking croc spawn chance - {E.Context}");
                 if (ParentObject.GetIntProperty(CheckedProperty) != 0)
                 {
                     return base.HandleEvent(E);

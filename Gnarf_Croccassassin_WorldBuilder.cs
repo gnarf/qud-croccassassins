@@ -30,7 +30,7 @@ namespace XRL.World.WorldBuilders
             The.Game.SetStringGameState("Gnarf_Chomping_Rack", rackId);
             The.Game.SetStringGameState("Gnarf_Chomping_Rack_Name", rack.GetDisplayName());
 
-            MetricsManager.LogInfo($"Adding {rack.GetDisplayName()} to {snapjawFort.targetZone}");
+            // MetricsManager.LogInfo($"Adding {rack.GetDisplayName()} to {snapjawFort.targetZone}");
         }
     }
 }
