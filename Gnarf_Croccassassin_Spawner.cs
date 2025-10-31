@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using XRL.UI;
 
 namespace XRL.World.Parts
@@ -10,15 +11,23 @@ namespace XRL.World.Parts
         {
             return base.WantEvent(ID, Cascade)
                 || ID == TakenEvent.ID
+                || ID == UnequippedEvent.ID
             ;
         }
 
+        public override bool HandleEvent(UnequippedEvent E)
+        {
+            ParentObject.SetIntProperty(CheckedProperty, 1);
+            return base.HandleEvent(E);
+        }
+
         static string CheckedProperty = nameof(Gnarf_Croccassassin_Spawner) + "_Checked";
+        static HashSet<string> IgnoreContexts = new() { "Restock" };
         public override bool HandleEvent(TakenEvent E)
         {
-            if (E.Actor.IsInActiveZone())
+            if (E.Actor.IsInActiveZone() && !IgnoreContexts.Contains(E.Context))
             {
-                MetricsManager.LogInfo($"Checking spawn chance {E.Context}");
+                MetricsManager.LogInfo($"Checking croc spawn chance - {E.Context}");
                 if (ParentObject.GetIntProperty(CheckedProperty) != 0)
                 {
                     return base.HandleEvent(E);
