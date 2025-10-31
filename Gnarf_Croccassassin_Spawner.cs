@@ -18,6 +18,7 @@ namespace XRL.World.Parts
         {
             if (E.Actor.IsInActiveZone())
             {
+                MetricsManager.LogInfo($"Checking spawn chance {E.Context}");
                 if (ParentObject.GetIntProperty(CheckedProperty) != 0)
                 {
                     return base.HandleEvent(E);
@@ -46,7 +47,7 @@ namespace XRL.World.Parts
                         {
                             var verb = "uncoil";
                             var extra = $"from {replaceWith.its} dormant form ready to attack";
-                            XDidY(replaceWith, verb, extra, ColorAsGoodFor: replaceWith, EndMark: "!", UsePopup: true);
+                            XDidY(replaceWith, verb, extra, ColorAsGoodFor: replaceWith, EndMark: "!", UsePopup: E.Actor.IsPlayerLed());
                             E.RequestInterfaceExit();
                             toReplace.Destroy(Silent: true);
                         }
